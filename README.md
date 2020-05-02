@@ -5,6 +5,5 @@ This Word press starter theme is to be used in conjunction with the Gutenberg St
 
 ## Configured plug-ins installed
 
-The events calendar
-
+The events calendar\
 wp-scss
