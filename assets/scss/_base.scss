@@ -1,0 +1,209 @@
+/*	0. Base
+/* -------------------------------------------------------------------------- */
+
+
+/*		a. Variables
+/* -------------------------------------------------------------------------- */
+
+
+$color--primary: #7b0c0c;
+$color--primary-light: #a55c5c;
+$color--secondary: #1a0742;
+$color--background: #ffffff;
+$color--link: #1a0742;
+
+$font--heavy: 'Open sans';
+$font: 'Open sans';
+
+
+/*		b. Mixins
+/* -------------------------------------------------------------------------- */
+
+@mixin viewport--3 {
+    @media (max-width: 59.9rem) { @content }
+}
+
+@mixin viewport--6 {
+    @media (min-width: 60rem) { @content }
+}
+
+@mixin viewport--9 {
+    @media (min-width: 92rem) { @content }
+}
+
+@mixin viewport--12 {
+    @media (min-width: 128rem) { @content }
+}
+
+
+/*		c. Typography
+/* -------------------------------------------------------------------------- */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  font-family: $font, serif;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+}
+
+.entry-header .entry-title {
+  font-size: 2.4rem;
+  line-height: 1;
+  margin: 1em 0 1rem;
+}
+
+h1 {
+    font-family: $font--heavy;
+    font-size: 2.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $color--primary;
+    @include viewport--3 {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+
+} 
+
+h2 {
+    font-size: 4.0rem;
+    line-height: 5.0rem;
+    letter-spacing: 0.08em;
+    color: $color--primary;
+    &.small {
+        font-size: 3.0rem;
+        line-height: 4.0rem;        
+    }
+    @include viewport--3 {
+        font-size: 3.0rem;
+        line-height: 4.0rem;
+    }
+}
+
+h3 {
+    font-size: 3.0rem;
+    line-height: 4.5rem;
+    letter-spacing: 0.08rem;
+    @include viewport--3 {
+        font-size: 2.2rem;
+        line-height: 3.2rem;
+    }   
+}
+
+h4, h5, h6 {
+    letter-spacing: 0.08rem;
+}
+
+h2, h3, h4, h5, h6 {
+    color: $color--primary;
+    font-family: $font--heavy;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: $font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.05rem;
+    color: #000000;
+    //max-width: 108rem;
+    //margin: 0 auto 1rem auto;
+    &.medium {
+        font-size: 2.5rem;
+        line-height: 3.2rem;
+    }
+    &.large {
+        font-size: 3.0rem;
+        line-height: 4.0rem;
+    }
+}
+
+a {
+    color: #0073aa;
+}
+
+.quote {
+    font-family: $font--heavy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.0rem;
+    line-height: 4.0rem;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.08em;
+    color: $color--primary;
+    @include viewport--3 {
+	font-size: 2.0rem;
+    line-height: 3.0rem;
+    }
+}
+
+.font--heavy {
+    font-family: $font--heavy;
+}
+
+blockquote, .blockquote {
+    p {
+        font-family: $font--heavy;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 3.0rem;
+        line-height: 4.5rem;
+        text-align: center;
+        letter-spacing: 0.08em;
+        color: $color--primary;
+    }
+    border: none;
+    padding-left: 0;
+}
+
+.align--center {
+    text-align: center;
+}
+
+.lighter {
+    font-weight: lighter;
+}
+
+.title--border {
+    color: $color--primary;
+    position: relative;
+    z-index: 10;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    border-left: 3px solid $color--primary;        
+    h1 {
+        line-height: 80px;
+        margin-top: 0;
+        margin-bottom: 40px;
+        text-align: left;
+        margin-left: 20px;
+    }
+}
+
+.title--border-bottom {
+    border-bottom: 2px #fff solid;
+    display: inline-block;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 3rem;
+    @include viewport--6 {
+        margin: 0 3rem;
+    }
+}
