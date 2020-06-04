@@ -5,6 +5,8 @@ function my_theme_enqueue_styles() {
  
 }
 
+require get_stylesheet_directory() . '/inc/global.php';
+
 /**
  * Custom Gutenberg blocks
  */

@@ -4,3 +4,4 @@
 04/08/20 6:01:33: style.scss - Undefined variable $purple: line: 125
 04/08/20 6:01:33: style.scss - Undefined variable $purple: line: 125
 04/08/20 6:01:34: style.scss - Undefined variable $purple: line: 125
+06/03/20 10:15:16: style.scss - parse error: failed at `color: $color--link:;` /Users/greg/Desktop/work/04_Projects/wp__starter/wp-content/themes/redbrickreative-starter/assets/scss/_base.scss on line 140

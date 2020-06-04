@@ -5,7 +5,7 @@
 /* -------------------------------------------------------------------------- */
 
 .has-primary-background-color {
-    background-color: #fff;
+    background-color: $color--primary;
 }
  
 .has-primary-color {
@@ -88,7 +88,7 @@ button {
 
 .modal-menu {
 
-    font-family: Nexa-Bold;
+    font-family: $font;
     text-transform: uppercase;
     li {
         background: $color--primary;
@@ -105,37 +105,53 @@ button {
 /* -------------------------------------------------------------------------- */
 
 
-input[type=text] {
-    border: 0;
-    border-radius: 0;
-    background: #eaeaf9;
-    font-family: AvenirLTPro-Roman;
-    font-style: normal;
-    font-weight: normal;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.15em;
-    text-transform: lowercase;
-    color: $color--primary;
+
+input {
+    line-height: 1.8;
 }
 
-input[type=email] {
+input[type=email], input[type=text] {
     border: 0;
     border-radius: 0;
     background: #eaeaf9;
-    font-family: AvenirLTPro-Roman;
+    font-family: inherit;
     font-style: normal;
     font-weight: normal;
     display: flex;
     align-items: center;
     letter-spacing: 0.15em;
     text-transform: lowercase;
-    color: $color--primary;
-}   
+    color: $color--text;
+    padding: 0.8rem;
+}
 
 input[type=submit] {
     text-decoration: none;
 }
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    font-family: $font--heavy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background-color: $color--primary;
+    border: 0.2rem solid $color--primary!important;
+    border-radius: 2.4rem;
+    line-height: 1;
+    padding: 1.8rem 3rem;
+    min-width: 16rem;
+
+}
+
 
 .formkit-field {
     margin: 0 auto;
@@ -164,28 +180,28 @@ input[type=submit] {
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: $color--primary;
+  color: $color--text;
 }
 
 ::-moz-placeholder { /* Firefox 19+ */
-  color: $color--primary;
+  color: $color--text;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-  color: $color--primary;
+  color: $color--text;
 }
 
 ::placeholder {
-  color: $color--primary;
+  color: $color--text;
   opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
- color: $color--primary;
+ color: $color--text;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
- color: $color--primary;
+ color: $color--text;
 }
 
 

@@ -28,18 +28,22 @@
 	}
 }
 
-@media (min-width: 1280px) {
-    .entry-content > .alignwide {
-        max-width: 108rem;
-        width: 108rem;
+
+.grid {
+    &--col-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 40px;
     }
 }
 
-@media (min-width: 1080px) {
-    .entry-content > .alignwide {
-        max-width: 108rem;
-        width: 108rem;
-    }
+.wp-block-group.alignwide > .wp-block-group__inner-container > * {
+  max-width: 1070px;
+}
+
+.wp-block-group.alignwide > .wp-block-group__inner-container > .alignleft, 
+.wp-block-group.alignwide > .wp-block-group__inner-container > .alignright {
+    max-width: 1070px !important; 
 }
 
 .no-margin {
@@ -59,13 +63,21 @@
 /* -------------------------------------------------------------------------- */
 
 .admin-bar .header {
-    margin-top: 32px;
+    /*margin-top: 32px;*/
+}
+
+
+.header {
+    background: $color--text;
+    position: relative;
+    z-index: 2;
 }
 
 ul.sub-menu {
     li {
         a {
-            padding: 2rem;
+            padding: 1rem 2rem;
+            color: $color--text;
         }
     }
 }
@@ -77,11 +89,16 @@ ul.sub-menu {
     align-items: center;
 
     .site-branding {
-      text-align: center;
-      margin: 0 0;
+        text-align: center;
+        margin: 0 0;
+        .custom-logo-link {
+            max-width: 200px;
+      }
+
     }
 
-    .site-title {
+    .site-title, .site-description {
+        display: none;
         margin: 0;
     }
 
@@ -90,14 +107,50 @@ ul.sub-menu {
       display: block;
       margin: 0;
       max-width: 580px;
-      text-align: center;
+      text-align: center; 
+        ul ul {
+            top: 4rem;
+        }
+
+    }
+
+    a {
+        color: #fff;
+        font-weight: 700;
     }
 
 }
 
+
 /*		c. Footer
 /* -------------------------------------------------------------------------- */
 
+.footer {
+    background: $color--black;
+    color: #fff;
+    margin: 0;
+    .widget {
+        &_media_image {
+            max-width: 20rem;
+        }
+        &__title {
+            font-size: 1.6rem;
+            color: #fff;
+            line-height: 1;
+            margin-top: 0;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0 0 2rem 0;
+            padding: 0;
+        }
+    }
+    .site-info {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+}
 
 
 /*      d. Events

@@ -20,12 +20,12 @@ function sandbox__gutenberg_default_colors()
             ),
             array(
                 'name' => 'Primary',
-                'slug' => 'primary-color',
+                'slug' => 'primary',
                 'color' => '#7b0c0c'
             ),
             array(
                 'name' => 'Primary light',
-                'slug' => 'primary-light-color',
+                'slug' => 'primary-light',
                 'color' => '#a55c5c'
             )
         )

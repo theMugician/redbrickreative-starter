@@ -48,6 +48,10 @@ body, button, input, select, optgroup, textarea {
   line-height: 1;
   margin: 1em 0 1rem;
 }
+.entry-header .entry-title a {
+  color: #171d29;
+  text-decoration: none;
+}
 h1 {
   font-family: 'Open sans';
   font-size: 2.5rem;
@@ -105,7 +109,7 @@ p {
   font-size: 1.8rem;
   line-height: 2.8rem;
   letter-spacing: 0.05rem;
-  color: #000;
+  color: #171d29;
 }
 p.medium {
   font-size: 2.5rem;
@@ -116,7 +120,10 @@ p.large {
   line-height: 4rem;
 }
 a {
-  color: #0073aa;
+  color: #7b0c0c;
+}
+a:hover {
+  color: #7b0c0c;
 }
 .quote {
   font-family: 'Open sans';
@@ -150,7 +157,7 @@ blockquote p, .blockquote p {
   line-height: 4.5rem;
   text-align: center;
   letter-spacing: 0.08em;
-  color: #7b0c0c;
+  color: #171d29;
 }
 .align--center {
   text-align: center;
@@ -214,17 +221,16 @@ blockquote p, .blockquote p {
 .container--full {
   max-width: 100%;
 }
-@media (min-width: 1280px) {
-  .entry-content > .alignwide {
-    max-width: 108rem;
-    width: 108rem;
-  }
+.grid--col-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 40px;
 }
-@media (min-width: 1080px) {
-  .entry-content > .alignwide {
-    max-width: 108rem;
-    width: 108rem;
-  }
+.wp-block-group.alignwide > .wp-block-group__inner-container > * {
+  max-width: 1070px;
+}
+.wp-block-group.alignwide > .wp-block-group__inner-container > .alignleft, .wp-block-group.alignwide > .wp-block-group__inner-container > .alignright {
+  max-width: 1070px !important;
 }
 .no-margin {
   margin: 0 auto;
@@ -238,10 +244,16 @@ blockquote p, .blockquote p {
 /*		b. Header
  /* -------------------------------------------------------------------------- */
 .admin-bar .header {
-  margin-top: 32px;
+  /*margin-top: 32px;*/
+}
+.header {
+  background: #171d29;
+  position: relative;
+  z-index: 2;
 }
 ul.sub-menu li a {
-  padding: 2rem;
+  padding: 1rem 2rem;
+  color: #171d29;
 }
 .header--horizontal {
   padding: 2rem;
@@ -253,7 +265,11 @@ ul.sub-menu li a {
   text-align: center;
   margin: 0 0;
 }
-.header--horizontal .site-title {
+.header--horizontal .site-branding .custom-logo-link {
+  max-width: 200px;
+}
+.header--horizontal .site-title, .header--horizontal .site-description {
+  display: none;
   margin: 0;
 }
 .header--horizontal .main-navigation {
@@ -263,8 +279,38 @@ ul.sub-menu li a {
   max-width: 580px;
   text-align: center;
 }
+.header--horizontal .main-navigation ul ul {
+  top: 4rem;
+}
+.header--horizontal a {
+  color: #fff;
+  font-weight: 700;
+}
 /*		c. Footer
  /* -------------------------------------------------------------------------- */
+.footer {
+  background: #171d29;
+  color: #fff;
+  margin: 0;
+}
+.footer .widget_media_image {
+  max-width: 20rem;
+}
+.footer .widget__title {
+  font-size: 1.6rem;
+  color: #fff;
+  line-height: 1;
+  margin-top: 0;
+}
+.footer .widget ul {
+  list-style-type: none;
+  margin: 0 0 2rem 0;
+  padding: 0;
+}
+.footer .site-info {
+  text-align: center;
+  margin: 0 auto;
+}
 /*      d. Events
  /* -------------------------------------------------------------------------- */
 .tribe-events .tribe-events-header {
@@ -278,7 +324,7 @@ ul.sub-menu li a {
 /*      aa. Color
  /* -------------------------------------------------------------------------- */
 .has-primary-background-color {
-  background-color: #fff;
+  background-color: #7b0c0c;
 }
 .has-primary-color {
   color: #7b0c0c;
@@ -347,7 +393,7 @@ button {
   background: #7b0c0c;
 }
 .modal-menu {
-  font-family: Nexa-Bold;
+  font-family: 'Open sans';
   text-transform: uppercase;
 }
 .modal-menu li {
@@ -358,34 +404,44 @@ button {
 }
 /*      c. Forms
  /* -------------------------------------------------------------------------- */
-input[type=text] {
-  border: 0;
-  border-radius: 0;
-  background: #eaeaf9;
-  font-family: AvenirLTPro-Roman;
-  font-style: normal;
-  font-weight: normal;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.15em;
-  text-transform: lowercase;
-  color: #7b0c0c;
+input {
+  line-height: 1.8;
 }
-input[type=email] {
+input[type=email], input[type=text] {
   border: 0;
   border-radius: 0;
   background: #eaeaf9;
-  font-family: AvenirLTPro-Roman;
+  font-family: inherit;
   font-style: normal;
   font-weight: normal;
   display: flex;
   align-items: center;
   letter-spacing: 0.15em;
   text-transform: lowercase;
-  color: #7b0c0c;
+  color: #171d29;
+  padding: 0.8rem;
 }
 input[type=submit] {
   text-decoration: none;
+}
+input[type="button"], input[type="reset"], input[type="submit"] {
+  font-family: 'Open sans';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 1;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-color: #7b0c0c;
+  border: 0.2rem solid #7b0c0c !important;
+  border-radius: 2.4rem;
+  line-height: 1;
+  padding: 1.8rem 3rem;
+  min-width: 16rem;
 }
 .formkit-field {
   margin: 0 auto;
@@ -408,28 +464,28 @@ input[type=submit] {
 }
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: #7b0c0c;
+  color: #171d29;
 }
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #7b0c0c;
+  color: #171d29;
 }
 :-moz-placeholder {
   /* Firefox 18- */
-  color: #7b0c0c;
+  color: #171d29;
 }
 ::placeholder {
-  color: #7b0c0c;
+  color: #171d29;
   opacity: 1;
   /* Firefox */
 }
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: #7b0c0c;
+  color: #171d29;
 }
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: #7b0c0c;
+  color: #171d29;
 }
 /*      d. Navigation
  /* -------------------------------------------------------------------------- */
