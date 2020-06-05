@@ -12,6 +12,31 @@
     color: $color--primary;
 }
 
+.has-primary-light-background-color {
+    background-color: $color--primary-light;
+}
+ 
+.has-primary-color {
+    color: $color--primary-light;
+}
+
+.has-black-background-color {
+    background-color: $color--black;
+}
+ 
+.has-black-color {
+    color: $color--black;
+}
+
+.has-secondary-background-color {
+    background-color: $color--secondary;
+}
+ 
+.has-secondary-color {
+    color: $color--secondary;
+}
+
+
 /*		a. Buttons
 /* -------------------------------------------------------------------------- */
 

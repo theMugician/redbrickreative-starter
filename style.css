@@ -329,6 +329,24 @@ ul.sub-menu li a {
 .has-primary-color {
   color: #7b0c0c;
 }
+.has-primary-light-background-color {
+  background-color: #a55c5c;
+}
+.has-primary-color {
+  color: #a55c5c;
+}
+.has-black-background-color {
+  background-color: #171d29;
+}
+.has-black-color {
+  color: #171d29;
+}
+.has-secondary-background-color {
+  background-color: #1a0742;
+}
+.has-secondary-color {
+  color: #1a0742;
+}
 /*		a. Buttons
  /* -------------------------------------------------------------------------- */
 button {

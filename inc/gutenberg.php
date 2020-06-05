@@ -16,7 +16,7 @@ function sandbox__gutenberg_default_colors()
             array(
                 'name' => 'Black',
                 'slug' => 'black',
-                'color' => '#000000'
+                'color' => '#171D29'
             ),
             array(
                 'name' => 'Primary',
@@ -27,6 +27,11 @@ function sandbox__gutenberg_default_colors()
                 'name' => 'Primary light',
                 'slug' => 'primary-light',
                 'color' => '#a55c5c'
+            ),
+            array(
+                'name' => 'Secondary light',
+                'slug' => 'secondary-light',
+                'color' => '#1a0742'
             )
         )
     );
