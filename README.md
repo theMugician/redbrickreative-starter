@@ -1,4 +1,4 @@
-# Red Bric Kreative Starter Theme
+# Seven Oceans Starter Theme
 
 This Word press starter theme is to be used in conjunction with the Gutenberg Starter theme.
 
