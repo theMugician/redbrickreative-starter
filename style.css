@@ -54,44 +54,44 @@ body, button, input, select, optgroup, textarea {
 }
 h1 {
   font-family: 'Open sans';
-  font-size: 2.5rem;
-  line-height: 4.5rem;
-  text-align: center;
+  font-size: 3.2rem;
+  line-height: 1.2;
+  text-align: left;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #7b0c0c;
 }
 @media (max-width: 59.9rem) {
   h1 {
-    font-size: 2.5rem;
-    line-height: 3.5rem;
+    font-size: 2.8rem;
+    line-height: 1.3;
   }
 }
 h2 {
-  font-size: 4rem;
-  line-height: 5rem;
+  font-size: 2.8rem;
+  line-height: 1.3;
   letter-spacing: 0.08em;
   color: #7b0c0c;
 }
 h2.small {
-  font-size: 3rem;
-  line-height: 4rem;
+  font-size: 2.4rem;
+  line-height: 1.3;
 }
 @media (max-width: 59.9rem) {
   h2 {
-    font-size: 3rem;
-    line-height: 4rem;
+    font-size: 2.4rem;
+    line-height: 1.3;
   }
 }
 h3 {
-  font-size: 3rem;
-  line-height: 4.5rem;
+  font-size: 2.4rem;
+  line-height: 1.3;
   letter-spacing: 0.08rem;
 }
 @media (max-width: 59.9rem) {
   h3 {
-    font-size: 2.2rem;
-    line-height: 3.2rem;
+    font-size: 2rem;
+    line-height: 1;
   }
 }
 h4, h5, h6 {
@@ -106,8 +106,8 @@ p {
   font-family: 'Open sans';
   font-style: normal;
   font-weight: normal;
-  font-size: 1.8rem;
-  line-height: 2.8rem;
+  font-size: 1.6rem;
+  line-height: 1.3;
   letter-spacing: 0.05rem;
   color: #171d29;
 }
@@ -129,8 +129,8 @@ a:hover {
   font-family: 'Open sans';
   font-style: normal;
   font-weight: bold;
-  font-size: 3rem;
-  line-height: 4rem;
+  font-size: 2.8rem;
+  line-height: 1.3;
   align-items: center;
   text-align: center;
   letter-spacing: 0.08em;
@@ -138,7 +138,7 @@ a:hover {
 }
 @media (max-width: 59.9rem) {
   .quote {
-    font-size: 2rem;
+    font-size: 2.4rem;
     line-height: 3rem;
   }
 }
@@ -153,8 +153,8 @@ blockquote p, .blockquote p {
   font-family: 'Open sans';
   font-style: normal;
   font-weight: bold;
-  font-size: 3rem;
-  line-height: 4.5rem;
+  font-size: 2.8rem;
+  line-height: 1.3;
   text-align: center;
   letter-spacing: 0.08em;
   color: #171d29;
@@ -211,9 +211,6 @@ blockquote p, .blockquote p {
   margin: 0 auto;
 }
 @media (min-width: 60rem) {
-  .container {
-    padding: 5.6rem 0;
-  }
 }
 .container--small {
   max-width: 64rem;
@@ -226,11 +223,20 @@ blockquote p, .blockquote p {
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 40px;
 }
+@media (max-width: 59.9rem) {
+  .grid--col-3 {
+    grid-template-columns: 1fr;
+  }
+}
+.alignwide {
+  max-width: 1080px;
+  margin: auto;
+}
 .wp-block-group.alignwide > .wp-block-group__inner-container > * {
-  max-width: 1070px;
+  max-width: 1080px;
 }
 .wp-block-group.alignwide > .wp-block-group__inner-container > .alignleft, .wp-block-group.alignwide > .wp-block-group__inner-container > .alignright {
-  max-width: 1070px !important;
+  max-width: 1080px !important;
 }
 .no-margin {
   margin: 0 auto;
@@ -251,15 +257,36 @@ blockquote p, .blockquote p {
   position: relative;
   z-index: 2;
 }
+ul.sub-menu {
+  background: #fff;
+}
+@media (max-width: 59.9rem) {
+  ul.sub-menu {
+    border-top: 4px solid #184a78;
+  }
+}
 ul.sub-menu li a {
   padding: 1rem 2rem;
   color: #171d29;
+}
+@media (max-width: 59.9rem) {
+  ul.sub-menu li a {
+    text-align: center;
+    margin: auto;
+  }
 }
 .header--horizontal {
   padding: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 59.9rem) {
+  .header--horizontal {
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 .header--horizontal .site-branding {
   text-align: center;
@@ -279,10 +306,32 @@ ul.sub-menu li a {
   max-width: 580px;
   text-align: center;
 }
-.header--horizontal .main-navigation ul ul {
-  top: 4rem;
+@media (max-width: 59.9rem) {
+  .header--horizontal .main-navigation {
+    width: 100%;
+  }
+}
+.header--horizontal .main-navigation .menu-toggle {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1.6rem 3rem;
+}
+@media (max-width: 59.9rem) {
+  .header--horizontal .main-navigation .menu-primary-menu-container {
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 59.9rem) {
+  .header--horizontal .main-navigation ul li:hover > ul, .header--horizontal .main-navigation ul li.focus > ul {
+    left: 0;
+    right: 0;
+  }
 }
 .header--horizontal a {
+  padding: 1rem;
   color: #fff;
   font-weight: 700;
 }
@@ -341,6 +390,12 @@ ul.sub-menu li a {
 .has-black-color {
   color: #171d29;
 }
+.has-white-background-color {
+  background-color: #fff;
+}
+.has-white-color {
+  color: #fff;
+}
 .has-secondary-background-color {
   background-color: #1a0742;
 }
@@ -353,8 +408,8 @@ button {
   font-family: 'Open sans';
   font-style: normal;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 1.2rem;
+  line-height: 1;
   align-items: center;
   text-align: center;
   letter-spacing: 0.08em;
@@ -363,14 +418,15 @@ button {
   text-decoration: none;
   color: #fff;
   background-color: #7b0c0c;
-  border: 2px solid #7b0c0c;
+  border: 0.2rem solid #7b0c0c;
+  border-radius: 0.2rem;
 }
 .button {
   font-family: 'Open sans';
   font-style: normal;
   font-weight: bold;
   font-size: 1.2rem;
-  line-height: 1.8rem;
+  line-height: 1;
   align-items: center;
   text-align: center;
   letter-spacing: 0.08rem;
@@ -380,6 +436,7 @@ button {
   color: #fff;
   background-color: #7b0c0c;
   border: 0.2rem solid #7b0c0c;
+  border-radius: 0.2rem;
 }
 .button--primary {
   color: #fff;
@@ -398,9 +455,10 @@ button {
 }
 .wp-block-button a {
   font-size: 1.2rem;
-  line-height: 1.8rem;
+  line-height: 1.3;
   text-decoration: none;
   padding: 2rem 3rem;
+  border-radius: 0.2rem;
 }
 /*      b. Menus
  /* -------------------------------------------------------------------------- */

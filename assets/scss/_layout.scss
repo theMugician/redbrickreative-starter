@@ -18,7 +18,7 @@
     max-width: 108rem;
     margin: 0 auto;
     @include viewport--6 {
-        padding: 5.6rem 0;
+        //padding: 5.6rem 0;
     }  
     &--small {
 	    max-width: 64rem;
@@ -34,16 +34,24 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: 40px;
+        @include viewport--3 {
+            grid-template-columns: 1fr;
+        }
     }
 }
 
+.alignwide {
+    max-width: 1080px;
+    margin: auto;
+}
+
 .wp-block-group.alignwide > .wp-block-group__inner-container > * {
-  max-width: 1070px;
+  max-width: 1080px;
 }
 
 .wp-block-group.alignwide > .wp-block-group__inner-container > .alignleft, 
 .wp-block-group.alignwide > .wp-block-group__inner-container > .alignright {
-    max-width: 1070px !important; 
+    max-width: 1080px !important; 
 }
 
 .no-margin {
@@ -74,10 +82,18 @@
 }
 
 ul.sub-menu {
+    @include viewport--3 {
+        border-top: 4px solid #184a78;
+    }
+    background: #fff;
     li {
         a {
             padding: 1rem 2rem;
             color: $color--text;
+            @include viewport--3 {
+                text-align: center;
+                margin: auto;
+            }
         }
     }
 }
@@ -87,7 +103,11 @@ ul.sub-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    @include viewport--3 {
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+    }
     .site-branding {
         text-align: center;
         margin: 0 0;
@@ -103,18 +123,37 @@ ul.sub-menu {
     }
 
     .main-navigation {
-      clear: both;
-      display: block;
-      margin: 0;
-      max-width: 580px;
-      text-align: center; 
-        ul ul {
-            top: 4rem;
+        clear: both;
+        display: block;
+        margin: 0;
+        max-width: 580px;
+        text-align: center; 
+        @include viewport--3 {
+            width: 100%;
+        }   
+        .menu-toggle {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            padding: 1.6rem 3rem;
         }
-
+        .menu-primary-menu-container {
+            @include viewport--3 {
+                position: absolute;
+                width: 100%;
+                background: #fff;
+                padding-bottom: 2rem;
+            }
+        }
+        ul li:hover > ul, ul li.focus > ul {
+            @include viewport--3 {
+                left: 0;
+                right: 0; 
+            }
+        }
     }
 
     a {
+        padding: 1rem;
         color: #fff;
         font-weight: 700;
     }

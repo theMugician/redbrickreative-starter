@@ -12,7 +12,7 @@
 ?>
 
 <footer id="colophon" class="site-footer footer">
-	<div class="grid--col-3 container">
+	<div class="grid--col-3 container section">
 
 	<?php 
 		if(is_active_sidebar('footer-column-1')) {
@@ -29,7 +29,7 @@
 	<div class="site-info">
 		<?php
 			/* translators: 1: Theme name, 2: Theme author. */
-			printf( esc_html__( 'Site designed and developed by %s', 'gutenberg-starter-theme' ), '<a href="https://redbrickreative.com/">Red Bric Kreative</a>' );
+			printf( esc_html__( 'Site designed and developed by %s', 'gutenberg-starter-theme' ), '<a href="https://sevenoceans.agency/">Seven Oceans</a>' );
 		?>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
